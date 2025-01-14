@@ -1,0 +1,19 @@
+{
+  "name": "@usetauri/monorepo",
+  "type": "module",
+  "private": true,
+  "packageManager": "pnpm@9.15.4",
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^3.14.0",
+    "eslint": "^9.18.0",
+    "typescript": "^5.7.3"
+  },
+  "resolutions": {
+    "@usetauri/core": "workspace:*"
+  }
+}

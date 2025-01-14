@@ -1,0 +1,44 @@
+{
+  "name": "@usetauri/core",
+  "type": "module",
+  "version": "0.0.1",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "import": "./index.js",
+      "require": "./index.js"
+    },
+    "./*": "./*"
+  },
+  "main": "./index.js",
+  "module": "./index.js",
+  "types": "./index.d.ts",
+  "files": [
+    "**/*.d.ts",
+    "**/*.js"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepack": "pnpm run build"
+  },
+  "peerDependencies": {
+    "@tauri-apps/api": "catalog:",
+    "@tauri-apps/plugin-fs": "catalog:",
+    "@tauri-apps/plugin-sql": "catalog:",
+    "@tauri-apps/plugin-upload": "catalog:"
+  },
+  "peerDependenciesMeta": {
+    "@tauri-apps/api": {
+      "optional": true
+    },
+    "@tauri-apps/plugin-fs": {
+      "optional": true
+    },
+    "@tauri-apps/plugin-sql": {
+      "optional": true
+    },
+    "@tauri-apps/plugin-upload": {
+      "optional": true
+    }
+  }
+}
