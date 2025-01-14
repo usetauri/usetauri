@@ -3,6 +3,8 @@
   "type": "module",
   "private": true,
   "packageManager": "pnpm@9.15.4",
+  "description": "Utilities for Tauri",
+  "license": "MIT",
   "scripts": {
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
