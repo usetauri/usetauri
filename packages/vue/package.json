@@ -2,6 +2,20 @@
   "name": "@usetauri/vue",
   "type": "module",
   "version": "0.0.1",
+  "author": "Luca <https://github.com/lucacicada>",
+  "homepage": "https://github.com/usetauri/usetauri#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/usetauri/usetauri.git",
+    "directory": "packages/vue"
+  },
+  "bugs": {
+    "url": "https://github.com/usetauri/usetauri/issues"
+  },
+  "keywords": [
+    "tauri",
+    "utils"
+  ],
   "sideEffects": false,
   "exports": {
     ".": {
