@@ -3,7 +3,7 @@ import type { Ref } from 'vue'
 import { getTauriWindow } from '@usetauri/core'
 import { ref } from 'vue'
 
-interface UseWindowState extends Pick<
+export interface UseTauriWindowState extends Pick<
   TauriWindow,
   | 'maximize'
   | 'unmaximize'
@@ -32,7 +32,7 @@ interface UseWindowState extends Pick<
   isEnabled: Ref<boolean>
 }
 
-export function useWindowState(window?: Maybe<TauriWindow>) {
+export function useTauriWindowState(window?: Maybe<TauriWindow>) {
   window ||= getTauriWindow()
 
   const isFullscreen = ref(false)
@@ -108,7 +108,7 @@ export function useWindowState(window?: Maybe<TauriWindow>) {
     }
   }
 
-  const state = <UseWindowState>{
+  const state = <UseTauriWindowState>{
     isFullscreen,
     isMinimized,
     isMaximized,
@@ -133,5 +133,5 @@ export function useWindowState(window?: Maybe<TauriWindow>) {
   }
 
   const promise = snapshot().then(() => state)
-  return <Awaitable<UseWindowState>>Object.assign(promise, state)
+  return <Awaitable<UseTauriWindowState>>Object.assign(promise, state)
 }

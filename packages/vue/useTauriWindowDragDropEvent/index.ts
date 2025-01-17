@@ -1,8 +1,8 @@
-import type { UseWindowEventOptions, WindowDragDropEventHandler } from '@usetauri/core'
+import type { UseTauriWindowEventOptions, WindowDragDropEventHandler } from '@usetauri/core'
 import { useTauriWindowDragDropEvent as listen } from '@usetauri/core'
 import { tryOnScopeDispose } from '@vueuse/core'
 
-export function useWindowDragDropEvent(handler: WindowDragDropEventHandler, opts?: UseWindowEventOptions) {
+export function useTauriWindowDragDropEvent(handler: WindowDragDropEventHandler, opts?: UseTauriWindowEventOptions) {
   const stop = listen(handler, opts)
   tryOnScopeDispose(stop)
   return stop

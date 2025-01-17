@@ -1,6 +1,6 @@
 import type { Event } from '@tauri-apps/api/event'
 import type { ScaleFactorChanged } from '@tauri-apps/api/window'
-import type { UseWindowEventOptions } from '../useTauriWindowEvent'
+import type { UseTauriWindowEventOptions } from '../useTauriWindowEvent'
 import { useTauriWindowEvent } from '../useTauriWindowEvent'
 
 export type { ScaleFactorChanged }
@@ -13,6 +13,6 @@ export type WindowScaleChangedEventHandler = (event: Event<ScaleFactorChanged>) 
  * - Changing the display's scale factor (e.g. in Control Panel on Windows).
  * - Moving the window to a display with a different scale factor.
  */
-export function useTauriWindowScaleChangedEvent(handler: WindowScaleChangedEventHandler, opts?: UseWindowEventOptions) {
+export function useTauriWindowScaleChangedEvent(handler: WindowScaleChangedEventHandler, opts?: UseTauriWindowEventOptions) {
   return useTauriWindowEvent('onScaleChanged', handler, opts)
 }

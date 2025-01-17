@@ -9,7 +9,7 @@ export type TauriWindowEventHandler<T extends TauriWindowEventName> = T extends 
   ? Parameters<TauriWindow[T]>[0]
   : never
 
-export interface UseWindowEventOptions {
+export interface UseTauriWindowEventOptions {
   /**
    * An error handler that fires when adding the event listener fails.
    * This typically occur when you do not have the associated permission to listen to the event.
@@ -26,7 +26,7 @@ export interface UseWindowEventOptions {
  * @remarks
  * _Does nothing on when `Tauri` is not available._
  */
-export function useTauriWindowEvent<const T extends TauriWindowEventName>(key: T, handler: TauriWindowEventHandler<T>, opts?: UseWindowEventOptions) {
+export function useTauriWindowEvent<const T extends TauriWindowEventName>(key: T, handler: TauriWindowEventHandler<T>, opts?: UseTauriWindowEventOptions) {
   const window = getTauriWindow()
 
   if (!window) {
