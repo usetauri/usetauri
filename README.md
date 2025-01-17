@@ -4,9 +4,33 @@ Utilities to use Tauri!
 
 _Inspired by vueuse_
 
-Conventions:
+```bash
+pnpm i @usetauri/vue
+```
 
-## Usage
+## Utils
+
+ - `useTauriWindowDragDropEvent`
+ - `useTauriWindowDragDropEvent`
+ - `useTauriWindowEvent`
+ - `useTauriWindowFocusChangedEvent`
+ - `useTauriWindowMovedEvent`
+ - `useTauriWindowResizedEvent`
+ - `useTauriWindowScaleChangedEvent`
+
+### Usage
+
+```html
+<script setup lang="ts">
+import { useTauriWindowDragDropEvent } from '@usetauri/vue'
+
+useTauriWindowDragDropEvent((event) => {
+  console.log(event)
+})
+</script>
+```
+
+## Awaitable
 
 Most of the utilities can be optionally awaited:
 
