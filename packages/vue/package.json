@@ -1,7 +1,7 @@
 {
   "name": "@usetauri/vue",
   "type": "module",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Luca <https://github.com/lucacicada>",
   "homepage": "https://github.com/usetauri/usetauri#readme",
   "repository": {
